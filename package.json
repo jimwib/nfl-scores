@@ -20,8 +20,11 @@
     "gulp-webserver": "^0.8.7"
   },
   "dependencies": {
+<<<<<<< HEAD
     "eslint": "^4.9.0",
     "eslint-config-google": "^0.9.1",
+=======
+>>>>>>> 2e3915668ec39d4eeae00c91abbe16d3272e8b38
     "gulp-sass": "^3.1.0"
   }
 }

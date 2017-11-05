@@ -11,7 +11,7 @@
     "node",
     "boilerplate"
   ],
-  "author": "Brian Han @thisisbrianhan",
+  "author": "",
   "license": "MIT",
   "devDependencies": {
     "gulp": "^3.8.10",
@@ -20,11 +20,9 @@
     "gulp-webserver": "^0.8.7"
   },
   "dependencies": {
-<<<<<<< HEAD
     "eslint": "^4.9.0",
     "eslint-config-google": "^0.9.1",
-=======
->>>>>>> 2e3915668ec39d4eeae00c91abbe16d3272e8b38
-    "gulp-sass": "^3.1.0"
+    "gulp-sass": "^3.1.0",
+    "nfl_scores": "^0.1.0"
   }
 }

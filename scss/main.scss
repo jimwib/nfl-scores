@@ -3,28 +3,51 @@
   box-sizing: border-box;
 }
 body {
-    background: tomato;
+    //background: tomato;
     color: #fff;
     text-transform: uppercase;
     font-family: 'Oswald', sans-serif;
     letter-spacing: 0.5em;
+    line-height: 1.5;
 }
 .grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     
 }
 
 .height-2-rows {
-    grid-row-start: 1;
-    grid-row-end: 3;
-    background: pink;
+    grid-row-start: span 2;
 }
 span.block {
     display: block;
 }
 .week {
-    font-size: 50px;
+    font-size: 4em;
     font-weight: 700;
     padding: 2em 2em 2em 0.5em;
+    line-height: 1;
+    background: #013369;
+    
+}
+.game {
+    display: flex;
+   
+    height: 100%;
+    background :pink;
+    div.team {
+        &.home {
+            text-align: right;
+            justify-content: flex-end;
+        }
+        display: flex;
+        flex-wrap: wrap;
+        padding: 3em 1em;
+        width: 50%;
+        align-items: center;
+        
+        span {
+            display: block;
+        }
+    }
 }

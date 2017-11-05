@@ -49,25 +49,46 @@ table {
   box-sizing: border-box; }
 
 body {
-  background: tomato;
   color: #fff;
   text-transform: uppercase;
   font-family: 'Oswald', sans-serif;
-  letter-spacing: 0.5em; }
+  letter-spacing: 0.5em;
+  line-height: 1.5; }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); }
+  grid-template-columns: repeat(2, 1fr); }
 
 .height-2-rows {
-  grid-row-start: 1;
-  grid-row-end: 3;
-  background: pink; }
+  grid-row-start: span 2; }
 
 span.block {
   display: block; }
 
 .week {
-  font-size: 50px;
+  font-size: 4em;
   font-weight: 700;
-  padding: 2em 2em 2em 0.5em; }
+  padding: 2em 2em 2em 0.5em;
+  line-height: 1;
+  background: #013369; }
+
+.game {
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  background: pink; }
+  .game div.team {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding: 3em 1em;
+    width: 50%;
+    -ms-flex-align: center;
+        align-items: center; }
+    .game div.team.home {
+      text-align: right;
+      -ms-flex-pack: end;
+          justify-content: flex-end; }
+    .game div.team span {
+      display: block; }

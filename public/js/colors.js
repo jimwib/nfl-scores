@@ -12,6 +12,7 @@ class Colors {
     constructor() {
         
         this.colors = [{
+        "id": "ARI",
         "name": "Arizona Cardinals",
         "league": "nfl",
         "colors": {
@@ -42,6 +43,7 @@ class Colors {
         }
     }, {
         "name": "Atlanta Falcons",
+        "id": "ATL",
         "league": "nfl",
         "colors": {
             "hex": [
@@ -67,6 +69,7 @@ class Colors {
         }
     }, {
         "name": "Baltimore Ravens",
+        "id": "BAL",
         "league": "nfl",
         "colors": {
             "hex": [
@@ -96,6 +99,7 @@ class Colors {
         }
     }, {
         "name": "Buffalo Bills",
+        "id": "BUF",
         "league": "nfl",
         "colors": {
             "hex": [
@@ -117,6 +121,7 @@ class Colors {
         }
     }, {
         "name": "Carolina Panthers",
+        "id": "CAR",
         "league": "nfl",
         "colors": {
             "hex": [
@@ -142,6 +147,7 @@ class Colors {
         }
     }, {
         "name": "Cincinnati Bengals",
+        "id": "CIN",
         "league": "nfl",
         "colors": {
             "hex": [
@@ -163,6 +169,7 @@ class Colors {
         }
     }, {
         "name": "Cleveland Browns",
+        "id": "CLE",
         "league": "nfl",
         "colors": {
             "hex": [
@@ -188,6 +195,7 @@ class Colors {
         }
     }, {
         "name": "Dallas Cowboys",
+        "id": "DAL",
         "league": "nfl",
         "colors": {
             "hex": [
@@ -225,6 +233,7 @@ class Colors {
         }
     }, {
         "name": "Chicago Bears",
+        "id": "CHI",
         "league": "nfl",
         "colors": {
             "hex": [
@@ -246,6 +255,7 @@ class Colors {
         }
     }, {
         "name": "Denver Broncos",
+        "id": "DEN",
         "league": "nfl",
         "colors": {
             "hex": [
@@ -267,6 +277,7 @@ class Colors {
         }
     }, {
         "name": "Detroit Lions",
+        "id": "DET",
         "league": "nfl",
         "colors": {
             "hex": [
@@ -292,6 +303,7 @@ class Colors {
         }
     }, {
         "name": "Green Bay Packers",
+        "id": "GB",
         "league": "nfl",
         "colors": {
             "hex": [
@@ -313,6 +325,7 @@ class Colors {
         }
     }, {
         "name": "Houston Texans",
+        "id": "HOU",
         "league": "nfl",
         "colors": {
             "hex": [
@@ -334,6 +347,7 @@ class Colors {
         }
     }, {
         "name": "Indianapolis Colts",
+        "id": "IND",
         "league": "nfl",
         "colors": {
             "hex": [
@@ -355,6 +369,37 @@ class Colors {
         }
     }, {
         "name": "Jacksonville Jaguars",
+        "id": "JAX",
+        "league": "nfl",
+        "colors": {
+            "hex": [
+                "000000",
+                "006778",
+                "9F792C",
+                "D7A22A"
+            ],
+            "rgb": [
+                "0 0 0",
+                "0 101 118",
+                "159 121 44",
+                "215 162 42"
+            ],
+            "cmyk": [
+                "70 50 50 100",
+                "100 0 20 30",
+                "34 48 100 13",
+                "17 37 100 0"
+            ],
+            "pms": [
+                "Process Black C",
+                "3155 C",
+                "126 C",
+                "7555 C"
+            ]
+        }
+    }, {
+        "name": "Jacksonville Jaguars",
+        "id": "JAC",
         "league": "nfl",
         "colors": {
             "hex": [
@@ -384,6 +429,7 @@ class Colors {
         }
     }, {
         "name": "Kansas City Chiefs",
+        "id": "KC",
         "league": "nfl",
         "colors": {
             "hex": [
@@ -409,6 +455,30 @@ class Colors {
         }
     }, {
         "name": "Los Angeles Rams",
+        "id": "LA",
+        "league": "nfl",
+        "colors": {
+            "hex": [
+                "002244",
+                "B3995D"
+            ],
+            "rgb": [
+                "0 21 50",
+                "175 146 93"
+            ],
+            "cmyk": [
+                "100 65 0 60",
+                "5 20 50 20"
+            ],
+            "pms": [
+                "289 C",
+                "465 C"
+            ]
+        }
+    },
+    , {
+        "name": "Saint Louis Rams",
+        "id": "STL",
         "league": "nfl",
         "colors": {
             "hex": [
@@ -430,6 +500,7 @@ class Colors {
         }
     }, {
         "name": "Miami Dolphins",
+        "id": "MIA",
         "league": "nfl",
         "colors": {
             "hex": [
@@ -455,6 +526,7 @@ class Colors {
         }
     }, {
         "name": "Minnesota Vikings",
+        "id": "MIN",
         "league": "nfl",
         "colors": {
             "hex": [
@@ -484,6 +556,7 @@ class Colors {
         }
     }, {
         "name": "New England Patriots",
+        "id": "NE",
         "league": "nfl",
         "colors": {
             "hex": [
@@ -509,6 +582,7 @@ class Colors {
         }
     }, {
         "name": "New Orleans Saints",
+        "id": "NO",
         "league": "nfl",
         "colors": {
             "hex": [
@@ -530,6 +604,7 @@ class Colors {
         }
     }, {
         "name": "New York Giants",
+        "id": "NYG",
         "league": "nfl",
         "colors": {
             "hex": [
@@ -555,6 +630,7 @@ class Colors {
         }
     }, {
         "name": "New York Jets",
+        "id": "NYJ",
         "league": "nfl",
         "colors": {
             "hex": [
@@ -573,6 +649,7 @@ class Colors {
         }
     }, {
         "name": "Oakland Raiders",
+        "id": "OAK",
         "league": "nfl",
         "colors": {
             "hex": [
@@ -594,6 +671,7 @@ class Colors {
         }
     }, {
         "name": "Philadelphia Eagles",
+        "id": "PHI",
         "league": "nfl",
         "colors": {
             "hex": [
@@ -627,6 +705,7 @@ class Colors {
         }
     }, {
         "name": "Pittsburgh Steelers",
+        "id": "PIT",
         "league": "nfl",
         "colors": {
             "hex": [
@@ -660,6 +739,34 @@ class Colors {
         }
     }, {
         "name": "Los Angeles Chargers",
+        "id": "LAC",
+        "league": "nfl",
+        "colors": {
+            "hex": [
+                "002244",
+                "0073CF",
+                "FFB612"
+            ],
+            "rgb": [
+                "0 21 50",
+                "0 128 197",
+                "238 173 30"
+            ],
+            "cmyk": [
+                "100 65 0 60",
+                "90 40 0 0",
+                "0 25 100 0"
+            ],
+            "pms": [
+                "289 C",
+                "285 C",
+                "1235 C"
+            ]
+        }
+    },
+    {
+        "name": "San Diego Chargers",
+        "id": "SD",
         "league": "nfl",
         "colors": {
             "hex": [
@@ -685,6 +792,7 @@ class Colors {
         }
     }, {
         "name": "San Francisco 49ers",
+        "id": "SF",
         "league": "nfl",
         "colors": {
             "hex": [
@@ -714,6 +822,7 @@ class Colors {
         }
     }, {
         "name": "Seattle Seahawks",
+        "id": "SEA",
         "league": "nfl",
         "colors": {
             "hex": [
@@ -739,6 +848,7 @@ class Colors {
         }
     }, {
         "name": "Tampa Bay Buccaneers",
+        "id": "TB",
         "league": "nfl",
         "colors": {
             "hex": [
@@ -772,6 +882,7 @@ class Colors {
         }
     }, {
         "name": "Tennessee Titans",
+        "id": "TEN",
         "league": "nfl",
         "colors": {
             "hex": [
@@ -801,6 +912,131 @@ class Colors {
         }
     }, {
         "name": "Washington Redskins",
+        "id": "WAS",
+        "league": "nfl",
+        "colors": {
+            "hex": [
+                "773141",
+                "FFB612",
+                "000000",
+                "5B2B2F"
+            ],
+            "rgb": [
+                "63 16 16",
+                "238 173 30",
+                "0 0 0",
+                "91 43 47"
+            ],
+            "cmyk": [
+                "20 100 60 30",
+                "0 25 100 0",
+                "70 50 50 100",
+                "0 80 70 70"
+            ],
+            "pms": [
+                "195 C",
+                "1235 C",
+                "Process Black C",
+                "490 C"
+            ]
+        }
+    },
+    {
+        "name": "AFC PRO BOWL",
+        "id": "APR",
+        "league": "nfl",
+        "colors": {
+            "hex": [
+                "773141",
+                "FFB612",
+                "000000",
+                "5B2B2F"
+            ],
+            "rgb": [
+                "63 16 16",
+                "238 173 30",
+                "0 0 0",
+                "91 43 47"
+            ],
+            "cmyk": [
+                "20 100 60 30",
+                "0 25 100 0",
+                "70 50 50 100",
+                "0 80 70 70"
+            ],
+            "pms": [
+                "195 C",
+                "1235 C",
+                "Process Black C",
+                "490 C"
+            ]
+        }
+    },
+    {
+        "name": "AFC PRO BOWL",
+        "id": "RIC",
+        "league": "nfl",
+        "colors": {
+            "hex": [
+                "773141",
+                "FFB612",
+                "000000",
+                "5B2B2F"
+            ],
+            "rgb": [
+                "63 16 16",
+                "238 173 30",
+                "0 0 0",
+                "91 43 47"
+            ],
+            "cmyk": [
+                "20 100 60 30",
+                "0 25 100 0",
+                "70 50 50 100",
+                "0 80 70 70"
+            ],
+            "pms": [
+                "195 C",
+                "1235 C",
+                "Process Black C",
+                "490 C"
+            ]
+        }
+    },
+    {
+        "name": "NFC PRO BOWL",
+        "id": "IRV",
+        "league": "nfl",
+        "colors": {
+            "hex": [
+                "773141",
+                "FFB612",
+                "000000",
+                "5B2B2F"
+            ],
+            "rgb": [
+                "63 16 16",
+                "238 173 30",
+                "0 0 0",
+                "91 43 47"
+            ],
+            "cmyk": [
+                "20 100 60 30",
+                "0 25 100 0",
+                "70 50 50 100",
+                "0 80 70 70"
+            ],
+            "pms": [
+                "195 C",
+                "1235 C",
+                "Process Black C",
+                "490 C"
+            ]
+        }
+    },
+    {
+        "name": "NFC PRO BOWL",
+        "id": "NPR",
         "league": "nfl",
         "colors": {
             "hex": [
@@ -833,8 +1069,12 @@ class Colors {
     }
     
     
-    find(team){
+    findByTeam(team){
         return this.colors.filter(i => i.name === team)[0]
-        
+    }
+
+    findById(id){
+        // console.log(id)
+        return this.colors.filter(i => i.id === id)[0]
     }
 }

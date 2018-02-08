@@ -92,3 +92,14 @@ span.block {
           justify-content: flex-end; }
     .game div.team span {
       display: block; }
+
+#years {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  z-index: 10;
+  padding: 1em; }
+  #years li {
+    font-size: 0.8em;
+    line-height: 2; }

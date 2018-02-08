@@ -103,3 +103,12 @@ span.block {
   #years li {
     font-size: 0.8em;
     line-height: 2; }
+
+.season-type {
+  font-size: 0.2em;
+  margin-top: 1em;
+  font-weight: normal; }
+
+.score {
+  font-size: 2em;
+  margin-top: 0.5em; }

@@ -4,18 +4,24 @@ const grid = document.querySelector('.grid');
 const apiUrl = 'https://jimwib.github.io/nfl-data/data/1995.json';
 const colors = new Colors();
 
+function leadingZero(number) {
+
+    return (number < 10) ? `0${number}` : number;
+
+}
+
 function game(homeTeam, visitorTeam, homeTeamBackground, visitorTeamBackground, game) {
     return `<div class="game">
                 <div class="team home" style="background: linear-gradient(to left, #${homeTeamBackground[0]} 10%, #${homeTeamBackground[0]} 90%)">
                     <div>
                         <div>${wrapWords(homeTeam)}</div>
-                        <div>${game.hs}</div>
+                        <div class="score">${leadingZero(game.hs)}</div>
                     </div>
                 </div>
                 <div class="team visitor" style="background: linear-gradient(to left, #${visitorTeamBackground[0]} 10%, #${visitorTeamBackground[0]} 90%)">
                     <div>
                         <div>${wrapWords(visitorTeam)}</div>
-                        <div>${game.vs}</div>
+                        <div class="score">${leadingZero(game.vs)}</div>
                     </div>
                 </div>
             </div>`;
@@ -29,7 +35,7 @@ function week(week, type){
                 <div class="item week-marker">
                     <p class="week"><span class="block">Week</span> 
                         <span class="block">${inWords(week)}</span>
-                        <span class="block">${type}</span>
+                        <span class="block season-type">${type}</span>
 
                     </p>
                 </div>

@@ -1,9 +1,9 @@
 // https://static.nfl.com/static/content/public/static/wildcat/assets/img/logos/teams/MIA.svg
 const grid = document.querySelector('.grid');
 //const apiUrl = 'https://feeds.nfl.com/feeds-rs/scores.json';
-const apiUrl = 'https://jimwib.github.io/nfl-data/data/1995.json';
+let year = 2017;
+let apiUrl = `https://jimwib.github.io/nfl-data/data/${year}.json`;
 const colors = new Colors();
-
 function leadingZero(number) {
 
     return (number < 10) ? `0${number}` : number;
@@ -14,30 +14,81 @@ function game(homeTeam, visitorTeam, homeTeamBackground, visitorTeamBackground, 
     return `<div class="game">
                 <div class="team home" style="background: linear-gradient(to left, #${homeTeamBackground[0]} 10%, #${homeTeamBackground[0]} 90%)">
                     <div>
-                        <div>${wrapWords(homeTeam)}</div>
+                        <div class="team-name">${wrapWords(homeTeam)}</div>
                         <div class="score">${leadingZero(game.hs)}</div>
                     </div>
                 </div>
-                <div class="team visitor" style="background: linear-gradient(to left, #${visitorTeamBackground[0]} 10%, #${visitorTeamBackground[0]} 90%)">
+                <div class="team visitor" style="background:
+                                        #${visitorTeamBackground[0]} ">
                     <div>
-                        <div>${wrapWords(visitorTeam)}</div>
+                        <div class="team-name">${wrapWords(visitorTeam)}</div>
                         <div class="score">${leadingZero(game.vs)}</div>
                     </div>
                 </div>
             </div>`;
 }
 
+function superBowl(year) {
+    // first one was 1966, 
+    // as we are using the season year not claender year
+    // go a year before
+    return romanize(1965 - year);
+}
 
-function week(week, type){
+function romanize (num) {
+    if (!+num)
+        return NaN;
+    var digits = String(+num).split(""),
+        key = ["","C","CC","CCC","CD","D","DC","DCC","DCCC","CM",
+               "","X","XX","XXX","XL","L","LX","LXX","LXXX","XC",
+               "","I","II","III","IV","V","VI","VII","VIII","IX"],
+        roman = "",
+        i = 3;
+    while (i--)
+        roman = (key[+digits.pop() + (i * 10)] || "") + roman;
+    return Array(+digits.join("") + 1).join("M") + roman;
+}
+
+
+function week(week){
+
+    let html = '';
+
+    console.log(week);
+
+
+    if(week.type == 'PRO') {
+
+        html = `
+            <p class="week">
+                <span class="block">PRO BOWL</span>
+                <span class="block season-type">${week.year}</span>
+            </p>`;
+
+    } else if(week.type == 'SUPER') {
+        
+        html = `
+            <p class="week">
+                <span class="block">SUPER BOWL</span>
+                <span class="block season-type">${superBowl(week.year)}</span>
+            </p>`;
+
+    } else {
+       
+        html = `
+            <p class="week">
+                <span class="block">Week</span> 
+                <span class="block">${inWords(week.week)}</span>
+                <span class="block season-type">${week.type}</span>
+            </p>`;
+    }
 
 
     return `
                 <div class="item week-marker">
-                    <p class="week"><span class="block">Week</span> 
-                        <span class="block">${inWords(week)}</span>
-                        <span class="block season-type">${type}</span>
+                        
+                        ${html}
 
-                    </p>
                 </div>
         `;
 }
@@ -75,22 +126,9 @@ function wrapWords(str, tmpl) {
         output += chunks[0].join(" ").replace(/\w+/g, "<span>$&</span>")
     }
     
-/*
-    if(length < 3) {
-        output = _wrap(words.slice(0,2).join(" "));
-
-    } else {
-        output = _wrap(words.slice(length-,).join(" "));
-
-        console.log(words);
-    }
-
-    */
-
 
     return output;
     
-    //console.log(words);
 }
 
 
@@ -118,7 +156,7 @@ let el = document.createElement('ol');
 const years = fillRange(1990,2018);
 let html = '';
 years.forEach(item => {
-    html += `<li><a>${item}</a></li>`;
+   // html += `<li><a>${item}</a></li>`;
 });
 el.innerHTML = html;
 el.setAttribute('id', 'years');
@@ -132,20 +170,38 @@ fetch(apiUrl)
 
         let weeks = data.weeks;        
         let postWeek = 1;
+        let postGames = weeks.filter((item) => {
+            return item.type == 'POST';
+        });
+
 
         weeks.forEach(week => {
             let el = document.createElement('li');
+
+            week.year = year;
 
             if(week.type == 'POST') {
                 week.week = postWeek;
 
                 postWeek+=1;
-            }
-            el.innerHTML = window.week(week.week, week.type); 
+
+                console.log("Post games", postGames.length);
+                console.log("Post game week", postWeek);
+
+                console.log("=======");
+
+
+                if(postWeek == (postGames.length + 1)) {
+                    week.type = 'SUPER';
+                }
+            } 
+
+
+            el.innerHTML = window.week(week); 
             grid.append(el);
             week.games.forEach(game => {
 
-                if(game.gt == "PRO") return;
+                //if(game.gt == "PRO") return;
 
                 
                 let homeTeamData = colors.findById(game.h);

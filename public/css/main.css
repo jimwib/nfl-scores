@@ -112,3 +112,6 @@ span.block {
 .score {
   font-size: 2em;
   margin-top: 0.5em; }
+
+.team-name:after {
+  content: '_'; }
